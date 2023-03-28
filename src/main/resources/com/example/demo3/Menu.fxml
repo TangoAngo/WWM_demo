@@ -12,5 +12,6 @@
       <Button fx:id="btnSettings" layoutX="220.0" layoutY="107.0" mnemonicParsing="false" onAction="#onButtonSettingsClick" text="Settings" AnchorPane.bottomAnchor="168.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="107.0" />
       <Label fx:id="lblLastscore" layoutX="15.0" layoutY="61.0" text="Last Score: 0" AnchorPane.bottomAnchor="222.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="61.0" />
       <Button fx:id="btnReload" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonReloadClick" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="btnClose" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#onButtonCloseClick" text="Close" />
    </children>
 </AnchorPane>

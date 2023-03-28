@@ -1,5 +1,6 @@
 package com.example.demo3;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,8 +21,6 @@ public class MainController {
     static int topScore;
     int x = 0;
     static boolean jokerEnabled = true;
-    @FXML
-    Label logInStatus;
     @FXML
     Label labelQuestion;
     @FXML
@@ -58,33 +57,6 @@ public class MainController {
     Button btnC;
     @FXML
     Button btnD;
-
-    @FXML
-    public void onLogInButtonClick() {
-        if (!textFieldUserName.getText().equals(FelixSettings.Username) && !passwordFieldPassword.getText().equals(FelixSettings.Password)) {
-            logInStatus.setText("Wrong Password/Username!");
-            logInStatus.setTextFill(Color.RED);
-        }
-        else {
-            serializeUserSettings();
-            openMenu();
-        }
-    }
-
-    public void openMenu() {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Menu.fxml"));
-        Scene MenuScene = null;
-        try {
-            MenuScene = new Scene(fxmlLoader.load(), 500, 300);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Stage stageTheLabelBelongs = (Stage) logInStatus.getScene().getWindow();
-        stageTheLabelBelongs.setTitle("Menu");
-        stageTheLabelBelongs.setScene(MenuScene);
-        stageTheLabelBelongs.show();
-        deserializeUserSettings();
-    }
 
     public void reopenMenu() {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Menu.fxml"));
@@ -452,6 +424,7 @@ public class MainController {
     }
 
     public void onButtonReloadClick() {
+        deserializeUserSettings();
         getLastscore();
         getTopscore();
         lblLastscore.setText("Last Score: " + lastScore);
@@ -465,6 +438,9 @@ public class MainController {
     static UserSettings FelixSettings = new UserSettings("Felix", "1234", topScore);
 
     public static void serializeUserSettings() {
+        if (FelixSettings.TopScore < topScore) {
+            FelixSettings.TopScore = topScore;
+        }
         try {
             FileOutputStream fileOut = new FileOutputStream("C:/Users/Felix/IdeaProjects/demo3/UserSettings/usersettings.ser");
             ObjectOutputStream out =  new ObjectOutputStream(fileOut);
@@ -496,7 +472,11 @@ public class MainController {
         System.out.println("Name: " + FelixSettings.Username);
         System.out.println("Password: " + FelixSettings.Password);
         System.out.println("Top Score: " + FelixSettings.TopScore);
+        topScore = FelixSettings.TopScore;
     }
 
-
+    public void onButtonCloseClick() {
+        serializeUserSettings();
+        Platform.exit();
+    }
 }
