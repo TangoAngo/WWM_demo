@@ -462,7 +462,7 @@ public class MainController {
         reopenMenuSettings();
     }
 
-    static UserSettings FelixSettings = new UserSettings("Felix", "1234");
+    static UserSettings FelixSettings = new UserSettings("Felix", "1234", topScore);
 
     public static void serializeUserSettings() {
         try {
@@ -495,6 +495,7 @@ public class MainController {
         System.out.println("Deserialization Users...");
         System.out.println("Name: " + FelixSettings.Username);
         System.out.println("Password: " + FelixSettings.Password);
+        System.out.println("Top Score: " + FelixSettings.TopScore);
     }
 
 
