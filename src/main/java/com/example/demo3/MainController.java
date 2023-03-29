@@ -70,7 +70,6 @@ public class MainController {
         stageTheButtonBelongs.setTitle("Menu");
         stageTheButtonBelongs.setScene(MenuScene);
         stageTheButtonBelongs.show();
-        getLastscore();
     }
 
     public void reopenMenuSettings() {
@@ -470,7 +469,6 @@ public class MainController {
 
         System.out.println("Deserialization Users...");
         System.out.println("Name: " + FelixSettings.Username);
-        System.out.println("Password: " + FelixSettings.Password);
         System.out.println("Top Score: " + FelixSettings.TopScore);
         topScore = FelixSettings.TopScore;
     }
