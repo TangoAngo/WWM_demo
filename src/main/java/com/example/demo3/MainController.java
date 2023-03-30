@@ -28,15 +28,13 @@ public class MainController {
     @FXML
     Label lblJokerStatus;
     @FXML
+    Label lblJokerTelephone;
+    @FXML
     Label lblAnswerStatus;
     @FXML
     Label lblTopscore;
     @FXML
     Label lblLastscore;
-    @FXML
-    TextField textFieldUserName;
-    @FXML
-    PasswordField passwordFieldPassword;
     @FXML
     Button btnStart;
     @FXML
@@ -47,6 +45,8 @@ public class MainController {
     Button btnBack;
     @FXML
     Button btnJokerFifty;
+    @FXML
+    Button btnJokerTelephone;
     @FXML
     Button btnJokerStatus;
     @FXML
@@ -138,6 +138,7 @@ public class MainController {
         lblScore.setText("Score: " + score);
         if (!jokerEnabled) {
             btnJokerFifty.setVisible(false);
+            btnJokerTelephone.setVisible(false);
         }
     }
 
@@ -328,6 +329,7 @@ public class MainController {
         btnB.setVisible(true);
         btnC.setVisible(true);
         btnD.setVisible(true);
+        lblJokerTelephone.setVisible(false);
         if (labelQuestion.getText().equals(Question_1_1.Question) || labelQuestion.getText().equals(Question_1_2.Question) || labelQuestion.getText().equals(Question_1_3.Question) || labelQuestion.getText().equals(Question_1_4.Question)) {
             btnBack.setVisible(false);
             btnNext.setVisible(false);
@@ -409,6 +411,63 @@ public class MainController {
             }
             btnJokerFifty.setVisible(false);
         }
+    }
+
+    public void onButtonJokerTelephoneClick() {
+        if (labelQuestion.getText().equals(Question_1_1.Question) || labelQuestion.getText().equals(Question_1_4.Question) || labelQuestion.getText().equals(Question_2_2.Question) || labelQuestion.getText().equals(Question_3_3.Question)) {
+            int a;
+            Random random = new Random();
+            a = random.nextInt(11);
+            if (a == 0 || a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6) {
+                lblJokerTelephone.setText("A");
+            } else if (a == 7) {
+                lblJokerTelephone.setText("B");
+            } else if (a == 8) {
+                lblJokerTelephone.setText("C");
+            } else if (a == 9) {
+                lblJokerTelephone.setText("D");
+            }
+        } else if (labelQuestion.getText().equals(Question_2_1.Question) || labelQuestion.getText().equals(Question_1_3.Question)) {
+            int b;
+            Random random = new Random();
+            b = random.nextInt(11);
+            if (b == 0 || b == 1 || b == 2 || b == 3 || b == 4 || b == 5 || b == 6) {
+                lblJokerTelephone.setText("B");
+            } else if (b == 7) {
+                lblJokerTelephone.setText("A");
+            } else if (b == 8) {
+                lblJokerTelephone.setText("C");
+            } else if (b == 9) {
+                lblJokerTelephone.setText("D");
+            }
+        } else if (labelQuestion.getText().equals(Question_1_2.Question) || labelQuestion.getText().equals(Question_3_1.Question) || labelQuestion.getText().equals(Question_3_2.Question) || labelQuestion.getText().equals(Question_3_4.Question)) {
+            int c;
+            Random random = new Random();
+            c = random.nextInt(11);
+            if (c == 0 || c == 1 || c == 2 || c == 3 || c == 4 || c == 5 || c == 6) {
+                lblJokerTelephone.setText("C");
+            } else if (c == 7) {
+                lblJokerTelephone.setText("A");
+            } else if (c == 8) {
+                lblJokerTelephone.setText("B");
+            } else if (c == 9) {
+                lblJokerTelephone.setText("D");
+            }
+        } else if (labelQuestion.getText().equals(Question_2_3.Question) || labelQuestion.getText().equals(Question_2_4.Question)) {
+            int d;
+            Random random = new Random();
+            d = random.nextInt(11);
+            if (d == 0 || d == 1 || d == 2 || d == 3 || d == 4 || d == 5 || d == 6) {
+                lblJokerTelephone.setText("D");
+            } else if (d == 7) {
+                lblJokerTelephone.setText("A");
+            } else if (d == 8) {
+                lblJokerTelephone.setText("B");
+            } else if (d == 9) {
+                lblJokerTelephone.setText("C");
+            }
+        }
+        btnJokerTelephone.setVisible(false);
     }
 
     public void getLastscore() {
