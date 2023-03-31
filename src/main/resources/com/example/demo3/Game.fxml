@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.GameController">
    <children>
-      <Label fx:id="labelQuestion" alignment="CENTER" layoutX="236.0" layoutY="89.0" text="Question" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Button fx:id="btnA" layoutX="100.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonAClick" text="A" visible="false" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="270.0" />
-      <Button fx:id="btnB" layoutX="354.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonBClick" text="B" visible="false" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="50.0" />
-      <Button fx:id="btnC" layoutX="90.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonCClick" text="C" visible="false" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="270.0" />
-      <Button fx:id="btnD" layoutX="358.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonDClick" text="D" visible="false" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="50.0" />
-      <Label fx:id="lblAnswerStatus" alignment="CENTER" layoutX="236.0" layoutY="269.0" text="Select one answer" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Button fx:id="btnReady" layoutX="224.0" layoutY="150.0" mnemonicParsing="false" onAction="#onReadyButtonClick" text="Ready" />
+      <Label fx:id="lblQuestion" alignment="CENTER" layoutX="236.0" layoutY="89.0" text="Question" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="btnA" layoutX="100.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonAClick" text="A" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="270.0" />
+      <Button fx:id="btnB" layoutX="354.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonBClick" text="B" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="50.0" />
+      <Button fx:id="btnC" layoutX="90.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonCClick" text="C" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="270.0" />
+      <Button fx:id="btnD" layoutX="358.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonDClick" text="D" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="50.0" />
+      <Label fx:id="lblAnswerStatus" alignment="CENTER" layoutX="236.0" layoutY="269.0" text="Select one answer" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Button fx:id="btnNext" layoutX="445.0" layoutY="265.0" mnemonicParsing="false" onAction="#onButtonNextClick" text="Next" visible="false" />
       <Button fx:id="btnBack" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#onButtonBackClick" text="Back" visible="false" />
       <Label fx:id="lblScore" layoutX="14.0" layoutY="14.0" text="Score: 0" AnchorPane.leftAnchor="14.0" />
