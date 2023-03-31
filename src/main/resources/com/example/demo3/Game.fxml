@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -18,8 +21,26 @@
       <Button fx:id="btnNext" layoutX="445.0" layoutY="265.0" mnemonicParsing="false" onAction="#onButtonNextClick" text="Next" visible="false" />
       <Button fx:id="btnBack" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#onButtonBackClick" text="Back" visible="false" />
       <Label fx:id="lblScore" layoutX="14.0" layoutY="14.0" text="Score: 0" AnchorPane.leftAnchor="14.0" />
-      <Button fx:id="btnJokerFifty" layoutX="439.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtonJokerFiftyClick" text="50/50" />
-      <Button fx:id="btnJokerTelephone" layoutX="380.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtonJokerTelephoneClick" text="Telefon" />
+      <Button fx:id="btnJokerFifty" layoutX="439.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtonJokerFiftyClick" text="50/50" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnJokerTelephone" layoutX="374.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtonJokerTelephoneClick" text="Telefon" AnchorPane.rightAnchor="70.0" />
       <Label fx:id="lblJokerTelephone" alignment="CENTER" contentDisplay="CENTER" layoutX="235.0" layoutY="48.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnJokerAudience" layoutX="308.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtonJokerAudienceClick" text="Audience" AnchorPane.rightAnchor="135.0" />
+      <AnchorPane fx:id="apnAudience" layoutX="150.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.leftAnchor="150.0">
+         <children>
+            <SubScene height="200.0" width="200.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+            <ProgressBar fx:id="pbrAudienceD" layoutX="99.0" layoutY="91.0" prefWidth="100.0" progress="0.0" rotate="-90.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0" />
+            <ProgressBar fx:id="pbrAudienceA" layoutX="-15.0" layoutY="91.0" prefWidth="100.0" progress="0.0" rotate="-90.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" />
+            <ProgressBar fx:id="pbrAudienceC" layoutX="67.0" layoutY="91.0" prefWidth="100.0" progress="0.0" rotate="-90.0" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="91.0" />
+            <ProgressBar fx:id="pbrAudienceB" layoutX="30.0" layoutY="91.0" prefWidth="100.0" progress="0.0" rotate="-90.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="67.0" />
+            <Label layoutX="46.0" layoutY="159.0" text="A" />
+            <Label layoutX="80.0" layoutY="159.0" text="B" />
+            <Label layoutX="113.0" layoutY="159.0" text="C" />
+            <Label layoutX="146.0" layoutY="159.0" text="D" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

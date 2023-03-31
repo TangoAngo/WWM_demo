@@ -1,7 +1,6 @@
 package com.example.demo3;
 
 import javafx.application.Platform;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,7 +12,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController implements Initializable{
+public class MainController implements Initializable {
 
     //Integers in Main
     static int Score;
@@ -44,14 +43,17 @@ public class MainController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        deserializeUserSettings();
         Score = GameController.Score;
         if (Score > topScore) {
             topScore = Score;
+            lblTopScoreNumber.setText(String.valueOf(topScore));
+        } else {
+            //lblTopScoreNumber.textProperty().bind(new SimpleIntegerProperty(FelixSettings.TopScore).asString());
+            lblTopScoreNumber.setText(String.valueOf(FelixSettings.TopScore));
         }
         lastScore = Score;
         lblLastScoreNumber.setText(String.valueOf(lastScore));
-        deserializeUserSettings();
-        lblTopScoreNumber.textProperty().bind(new SimpleIntegerProperty(FelixSettings.TopScore).asString());
         jokerEnabled = SettingsController.Joker;
     }
 
