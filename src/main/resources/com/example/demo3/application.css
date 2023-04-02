@@ -1,0 +1,9 @@
+.root {
+    -fx-background-image:url('1080.png');
+    -fx-background-size:cover;
+}
+.button {
+    -fx-background-color: null;
+    -fx-border-color: black;
+    -fx-border-radius: 15;
+}

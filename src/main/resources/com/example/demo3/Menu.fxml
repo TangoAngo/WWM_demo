@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="300.0" maxWidth="500.0" minHeight="300.0" minWidth="500.0" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.MainController">
+<AnchorPane maxHeight="300.0" maxWidth="500.0" minHeight="300.0" minWidth="500.0" prefHeight="300.0" prefWidth="500.0" styleClass="root" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.MainController">
    <children>
-      <Label fx:id="lblTopscore" layoutX="15.0" layoutY="14.0" text="Top Score:" AnchorPane.bottomAnchor="269.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
-      <Button fx:id="btnStart" layoutX="230.0" layoutY="76.0" mnemonicParsing="false" onAction="#onStartButtonClick" text="Start" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="76.0" />
-      <Button fx:id="btnSettings" layoutX="220.0" layoutY="107.0" mnemonicParsing="false" onAction="#onButtonSettingsClick" text="Settings" AnchorPane.bottomAnchor="168.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="107.0" />
-      <Label fx:id="lblLastscore" layoutX="15.0" layoutY="36.0" text="Last Score:" AnchorPane.bottomAnchor="247.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="36.0" />
-      <Button fx:id="btnClose" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#onButtonCloseClick" text="Close" />
+      <Label fx:id="lblTopscore" layoutX="15.0" layoutY="14.0" text="Top Score:" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnStart" layoutX="210.0" layoutY="79.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="25.0" prefWidth="80.0" stylesheets="@application.css" text="Start" />
+      <Button fx:id="btnSettings" layoutX="210.0" layoutY="110.0" mnemonicParsing="false" onAction="#onButtonSettingsClick" prefHeight="25.0" prefWidth="80.0" text="Settings" />
+      <Label fx:id="lblLastscore" layoutX="15.0" layoutY="36.0" text="Last Score:" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnClose" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#onButtonCloseClick" prefHeight="27.0" prefWidth="55.0" text="Close" />
       <Label fx:id="lblTopScoreNumber" layoutX="81.0" layoutY="14.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="15.0" />
       <Label fx:id="lblLastScoreNumber" layoutX="81.0" layoutY="36.0" text="0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="15.0" />
    </children>

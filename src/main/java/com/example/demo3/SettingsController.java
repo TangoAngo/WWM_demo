@@ -55,7 +55,7 @@ public class SettingsController implements Initializable {
             throw new RuntimeException(e);
         }
         Stage stageTheButtonBelongs = (Stage) btnBack.getScene().getWindow();
-        stageTheButtonBelongs.setTitle("Menu");
+        stageTheButtonBelongs.setTitle("Wer wird Millionär?");
         stageTheButtonBelongs.setScene(MenuScene);
         stageTheButtonBelongs.show();
     }

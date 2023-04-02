@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -49,7 +50,6 @@ public class MainController implements Initializable {
             topScore = Score;
             lblTopScoreNumber.setText(String.valueOf(topScore));
         } else {
-            //lblTopScoreNumber.textProperty().bind(new SimpleIntegerProperty(FelixSettings.TopScore).asString());
             lblTopScoreNumber.setText(String.valueOf(FelixSettings.TopScore));
         }
         lastScore = Score;
@@ -58,31 +58,31 @@ public class MainController implements Initializable {
     }
 
     public void onStartButtonClick() {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Game.fxml"));
-        Scene GameScene = null;
         try {
-            GameScene = new Scene(fxmlLoader.load(), 500, 300);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            Parent root = FXMLLoader.load(GameController.class.getResource("Game.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            Stage stage = (Stage) btnStart.getScene().getWindow();
+            stage.setTitle("Wer wird Millionär?");
+            stage.setScene(scene);
+            stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
         }
-        Stage stageTheButtonBelongs = (Stage) btnStart.getScene().getWindow();
-        stageTheButtonBelongs.setTitle("Game");
-        stageTheButtonBelongs.setScene(GameScene);
-        stageTheButtonBelongs.show();
     }
 
     public void onButtonSettingsClick() {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Settings.fxml"));
-        Scene SettingsScene = null;
         try {
-            SettingsScene = new Scene(fxmlLoader.load(), 500, 300);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            Parent root = FXMLLoader.load(SettingsController.class.getResource("Settings.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            Stage stage = (Stage) btnStart.getScene().getWindow();
+            stage.setTitle("Wer wird Millionär?");
+            stage.setScene(scene);
+            stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
         }
-        Stage stageTheButtonBelongs = (Stage) btnStart.getScene().getWindow();
-        stageTheButtonBelongs.setTitle("Settings");
-        stageTheButtonBelongs.setScene(SettingsScene);
-        stageTheButtonBelongs.show();
     }
 
     public static void serializeUserSettings() {
