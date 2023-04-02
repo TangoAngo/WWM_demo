@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.SettingsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.SettingsController">
    <children>
-      <Button fx:id="btnJoker" layoutX="206.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerClick" text="Joker" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="260.0" />
+      <Button fx:id="btnJoker" layoutX="206.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerClick" onMouseEntered="#onButtonJokerEntered" onMouseExited="#onButtonJokerExited" text="Joker" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="260.0" />
       <Label fx:id="lblJoker" layoutX="271.0" layoutY="18.0" text="Enabled" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="180.0" />
-      <Button fx:id="btnBack" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#onButtonBackClick" text="Back" />
+      <Button fx:id="btnBack" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#onButtonBackClick" onMouseEntered="#onButtonBackEntered" onMouseExited="#onButtonBackExited" text="Back" />
    </children>
 </AnchorPane>

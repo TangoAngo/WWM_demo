@@ -46,6 +46,14 @@ public class SettingsController implements Initializable {
         }
     }
 
+    public void onButtonJokerEntered() {
+        btnJoker.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonJokerExited() {
+        btnJoker.setStyle("-fx-background-color: Null");
+    }
+
     public void onButtonBackClick() {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Menu.fxml"));
         Scene MenuScene = null;
@@ -58,5 +66,13 @@ public class SettingsController implements Initializable {
         stageTheButtonBelongs.setTitle("Wer wird Millionär?");
         stageTheButtonBelongs.setScene(MenuScene);
         stageTheButtonBelongs.show();
+    }
+
+    public void onButtonBackEntered() {
+        btnBack.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonBackExited() {
+        btnBack.setStyle("-fx-background-color: Null");
     }
 }

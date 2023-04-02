@@ -586,6 +586,14 @@ public class GameController implements Initializable {
         }
     }
 
+    public void onButtonAEntered() {
+        btnA.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonAExited() {
+        btnA.setStyle("-fx-background-color: Null");
+    }
+
     public void onButtonBClick() {
         if (Correct_B()) {
             lblAnswerStatus.setText("Correct");
@@ -603,6 +611,14 @@ public class GameController implements Initializable {
             btnC.setVisible(false);
             btnD.setVisible(false);
         }
+    }
+
+    public void onButtonBEntered() {
+        btnB.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonBExited() {
+        btnB.setStyle("-fx-background-color: Null");
     }
 
     public void onButtonCClick() {
@@ -624,6 +640,14 @@ public class GameController implements Initializable {
         }
     }
 
+    public void onButtonCEntered() {
+        btnC.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonCExited() {
+        btnC.setStyle("-fx-background-color: Null");
+    }
+
     public void onButtonDClick() {
         if (Correct_D()) {
             lblAnswerStatus.setText("Correct");
@@ -641,6 +665,14 @@ public class GameController implements Initializable {
             btnB.setVisible(false);
             btnC.setVisible(false);
         }
+    }
+
+    public void onButtonDEntered() {
+        btnD.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonDExited() {
+        btnD.setStyle("-fx-background-color: Null");
     }
 
     public void onButtonJokerFiftyClick() {
@@ -704,6 +736,14 @@ public class GameController implements Initializable {
         btnJokerFifty.setVisible(false);
     }
 
+    public void onButtonJokerFiftyEntered() {
+        btnJokerFifty.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonJokerFiftyExited() {
+        btnJokerFifty.setStyle("-fx-background-color: Null");
+    }
+
     public void onButtonJokerTelephoneClick() {
         if (Correct_A()) {
             int a;
@@ -759,6 +799,14 @@ public class GameController implements Initializable {
             }
         }
         btnJokerTelephone.setVisible(false);
+    }
+
+    public void onButtonJokerTelephoneEntered() {
+        btnJokerTelephone.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonJokerTelephoneExited() {
+        btnJokerTelephone.setStyle("-fx-background-color: Null");
     }
 
     public void onButtonJokerAudienceClick() {
@@ -940,6 +988,14 @@ public class GameController implements Initializable {
         btnJokerAudience.setVisible(false);
     }
 
+    public void onButtonJokerAudienceEntered() {
+        btnJokerAudience.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonJokerAudienceExited() {
+        btnJokerAudience.setStyle("-fx-background-color: Null");
+    }
+
     public void onButtonNextClick() {
         btnA.setVisible(true);
         btnB.setVisible(true);
@@ -968,8 +1024,24 @@ public class GameController implements Initializable {
         }
     }
 
+    public void onButtonNextEntered() {
+        btnNext.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonNextExited() {
+        btnNext.setStyle("-fx-background-color: Null");
+    }
+
     public void onButtonBackClick() {
         openMenu();
+    }
+
+    public void onButtonBackEntered() {
+        btnBack.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonBackExited() {
+        btnBack.setStyle("-fx-background-color: Null");
     }
 
     public void openMenu() {

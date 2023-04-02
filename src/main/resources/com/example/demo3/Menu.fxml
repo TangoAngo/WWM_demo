@@ -7,10 +7,10 @@
 <AnchorPane maxHeight="300.0" maxWidth="500.0" minHeight="300.0" minWidth="500.0" prefHeight="300.0" prefWidth="500.0" styleClass="root" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.MainController">
    <children>
       <Label fx:id="lblTopscore" layoutX="15.0" layoutY="14.0" text="Top Score:" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-      <Button fx:id="btnStart" layoutX="210.0" layoutY="79.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="25.0" prefWidth="80.0" stylesheets="@application.css" text="Start" />
-      <Button fx:id="btnSettings" layoutX="210.0" layoutY="110.0" mnemonicParsing="false" onAction="#onButtonSettingsClick" prefHeight="25.0" prefWidth="80.0" text="Settings" />
+      <Button fx:id="btnStart" layoutX="210.0" layoutY="79.0" mnemonicParsing="false" onAction="#onStartButtonClick" onMouseEntered="#onButtonStartEntered" onMouseExited="#onButtonStartExited" prefHeight="25.0" prefWidth="80.0" stylesheets="@application.css" text="Start" />
+      <Button fx:id="btnSettings" layoutX="210.0" layoutY="110.0" mnemonicParsing="false" onAction="#onButtonSettingsClick" onMouseEntered="#onButtonSettingsEntered" onMouseExited="#onButtonSettingsExited" prefHeight="25.0" prefWidth="80.0" text="Settings" />
       <Label fx:id="lblLastscore" layoutX="15.0" layoutY="36.0" text="Last Score:" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-      <Button fx:id="btnClose" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#onButtonCloseClick" prefHeight="27.0" prefWidth="55.0" text="Close" />
+      <Button fx:id="btnClose" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#onButtonCloseClick" onMouseEntered="#onButtonCloseEntered" onMouseExited="#onButtonCloseExited" prefHeight="27.0" prefWidth="55.0" text="Close" />
       <Label fx:id="lblTopScoreNumber" layoutX="81.0" layoutY="14.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="15.0" />
       <Label fx:id="lblLastScoreNumber" layoutX="81.0" layoutY="36.0" text="0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="15.0" />
    </children>

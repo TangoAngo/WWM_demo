@@ -31,6 +31,8 @@ public class MainController implements Initializable {
     Button btnStart;
     @FXML
     Button btnSettings;
+    @FXML
+    Button btnClose;
 
     //Labels in Main.fxml
     @FXML
@@ -71,6 +73,14 @@ public class MainController implements Initializable {
         }
     }
 
+    public void onButtonStartEntered() {
+        btnStart.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonStartExited() {
+        btnStart.setStyle("-fx-background-color: Null");
+    }
+
     public void onButtonSettingsClick() {
         try {
             Parent root = FXMLLoader.load(SettingsController.class.getResource("Settings.fxml"));
@@ -83,6 +93,14 @@ public class MainController implements Initializable {
         } catch(Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void onButtonSettingsEntered() {
+        btnSettings.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonSettingsExited() {
+        btnSettings.setStyle("-fx-background-color: Null");
     }
 
     public static void serializeUserSettings() {
@@ -121,5 +139,13 @@ public class MainController implements Initializable {
     public void onButtonCloseClick() {
         serializeUserSettings();
         Platform.exit();
+    }
+
+    public void onButtonCloseEntered() {
+        btnClose.setStyle("-fx-background-color: Orange");
+    }
+
+    public void onButtonCloseExited() {
+        btnClose.setStyle("-fx-background-color: Null");
     }
 }
