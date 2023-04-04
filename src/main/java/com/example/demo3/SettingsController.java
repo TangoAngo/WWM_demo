@@ -29,18 +29,18 @@ public class SettingsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Joker == true) {
+        if (Joker) {
             lblJoker.setText("Enabled");
-        } else if (Joker == false) {
+        } else if (!Joker) {
             lblJoker.setText("Disabled");
         }
     }
 
     public void onButtonJokerClick() {
-        if (Joker == true) {
+        if (Joker) {
             Joker = false;
             lblJoker.setText("Disabled");
-        } else if (Joker == false) {
+        } else if (!Joker) {
             Joker = true;
             lblJoker.setText("Enabled");
         }

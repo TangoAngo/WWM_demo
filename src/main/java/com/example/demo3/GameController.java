@@ -76,12 +76,17 @@ public class GameController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Score = 0;
         loadQuestion_1();
-        if (SettingsController.Joker == false) {
+        if (!SettingsController.Joker) {
             btnJokerFifty.setVisible(false);
             btnJokerTelephone.setVisible(false);
             btnJokerAudience.setVisible(false);
         }
     }
+
+    //Question Question_6_1 = new Question("", "", "", "", "");
+    //Question Question_6_2 = new Question("", "", "", "", "");
+    //Question Question_6_3 = new Question("", "", "", "", "");
+    //Question Question_6_4 = new Question("", "", "", "", "");
 
     Question Question_1_1 = new Question("Was ist die Hauptstadt von Deutschland?", "Berlin", "München", "Frankfurt am Main", "Bonn");
     Question Question_1_2 = new Question("Wie viele Beine hat eine Spinne?", "8", "10", "16", "6");
@@ -103,6 +108,16 @@ public class GameController implements Initializable {
     Question Question_4_3 = new Question("Wann wird der Tag der Deutschen Einheit gefeiert?", "3. Oktober", "2. November", "4. Juli", "6. September");
     Question Question_4_4 = new Question("Welche ist die Hauptstadt Australiens?", "Canberra", "Sydney", "Melbourne", "Perth");
 
+    Question Question_5_1 = new Question("Wie heißt das flächenmäßig kleinste Bundesland?", "Bremen", "Berlin", "Saarland", "Hamburg");
+    Question Question_5_2 = new Question("Welcher deutsche Herrscher trug den Beinamen 'der Große?'", "Friedrich II. von Preußen", "Friedrich I. von Preußen", "Friedrich III. von Sachsen", "Friedrich III. von Österreich");
+    Question Question_5_3 = new Question("Wie nennt man einen Feinschmecker auch?", "Gourmet", "Gourmed", "Genießer", "Leckermäulchen");
+    Question Question_5_4 = new Question("Welche Insel gehört nicht zu den balarischen Inseln?", "Gran Canaria", "Ibiza", "Formentera", "Cabrera");
+
+    Question Question_6_1 = new Question("Welcher Berg ist der höchste der Welt?", "Mount Everest", "Zugspitze", "Mount Blanc", "Kilimandscharo");
+    Question Question_6_2 = new Question("Wann wurde Queen Elisabeth II. gekrönt?", "1953", "1945", "1972", "1964");
+    Question Question_6_3 = new Question("Wer war der erste Präsident der USA?", "George Washington", "Theodor Roosevelt", "Brent Peterson", "Bill CLinton");
+    Question Question_6_4 = new Question("Wie hoch ist der Eifelturm?", "300m", "220m", "176m", "150m");
+
     public boolean Correct_A() {
         if (btnA.getText().equals(Question_1_1.Answer_1) || btnA.getText().equals(Question_1_2.Answer_1) || btnA.getText().equals(Question_1_3.Answer_1) || btnA.getText().equals(Question_1_4.Answer_1)) {
             return true;
@@ -111,6 +126,10 @@ public class GameController implements Initializable {
         } else if (btnA.getText().equals(Question_3_1.Answer_1) || btnA.getText().equals(Question_3_2.Answer_1) || btnA.getText().equals(Question_3_3.Answer_1) || btnA.getText().equals(Question_3_4.Answer_1)) {
             return true;
         } else if (btnA.getText().equals(Question_4_1.Answer_1) || btnA.getText().equals(Question_4_2.Answer_1) || btnA.getText().equals(Question_4_3.Answer_1) || btnA.getText().equals(Question_4_4.Answer_1)) {
+            return true;
+        } else if (btnA.getText().equals(Question_5_1.Answer_1) || btnA.getText().equals(Question_5_2.Answer_1) || btnA.getText().equals(Question_5_3.Answer_1) || btnA.getText().equals(Question_5_4.Answer_1)) {
+            return true;
+        } else if (btnA.getText().equals(Question_6_1.Answer_1) || btnA.getText().equals(Question_6_2.Answer_1) || btnA.getText().equals(Question_6_3.Answer_1) || btnA.getText().equals(Question_6_4.Answer_1)) {
             return true;
         } else {
             return false;
@@ -126,6 +145,10 @@ public class GameController implements Initializable {
             return true;
         } else if (btnB.getText().equals(Question_4_1.Answer_1) || btnB.getText().equals(Question_4_2.Answer_1) || btnB.getText().equals(Question_4_3.Answer_1) || btnB.getText().equals(Question_4_4.Answer_1)) {
             return true;
+        } else if (btnB.getText().equals(Question_5_1.Answer_1) || btnB.getText().equals(Question_5_2.Answer_1) || btnB.getText().equals(Question_5_3.Answer_1) || btnB.getText().equals(Question_5_4.Answer_1)) {
+            return true;
+        } else if (btnB.getText().equals(Question_6_1.Answer_1) || btnB.getText().equals(Question_6_2.Answer_1) || btnB.getText().equals(Question_6_3.Answer_1) || btnB.getText().equals(Question_6_4.Answer_1)) {
+            return true;
         } else {
             return false;
         }
@@ -140,6 +163,10 @@ public class GameController implements Initializable {
             return true;
         } else if (btnC.getText().equals(Question_4_1.Answer_1) || btnC.getText().equals(Question_4_2.Answer_1) || btnC.getText().equals(Question_4_3.Answer_1) || btnC.getText().equals(Question_4_4.Answer_1)) {
             return true;
+        } else if (btnC.getText().equals(Question_5_1.Answer_1) || btnC.getText().equals(Question_5_2.Answer_1) || btnC.getText().equals(Question_5_3.Answer_1) || btnC.getText().equals(Question_5_4.Answer_1)) {
+            return true;
+        } else if (btnC.getText().equals(Question_6_1.Answer_1) || btnC.getText().equals(Question_6_2.Answer_1) || btnC.getText().equals(Question_6_3.Answer_1) || btnC.getText().equals(Question_6_4.Answer_1)) {
+            return true;
         } else {
             return false;
         }
@@ -153,6 +180,10 @@ public class GameController implements Initializable {
         } else if (btnD.getText().equals(Question_3_1.Answer_1) || btnD.getText().equals(Question_3_2.Answer_1) || btnD.getText().equals(Question_3_3.Answer_1) || btnD.getText().equals(Question_3_4.Answer_1)) {
             return true;
         } else if (btnD.getText().equals(Question_4_1.Answer_1) || btnD.getText().equals(Question_4_2.Answer_1) || btnD.getText().equals(Question_4_3.Answer_1) || btnD.getText().equals(Question_4_4.Answer_1)) {
+            return true;
+        } else if (btnD.getText().equals(Question_5_1.Answer_1) || btnD.getText().equals(Question_5_2.Answer_1) || btnD.getText().equals(Question_5_3.Answer_1) || btnD.getText().equals(Question_5_4.Answer_1)) {
+            return true;
+        } else if (btnD.getText().equals(Question_6_1.Answer_1) || btnD.getText().equals(Question_6_2.Answer_1) || btnD.getText().equals(Question_6_3.Answer_1) || btnD.getText().equals(Question_6_4.Answer_1)) {
             return true;
         } else {
             return false;
@@ -563,6 +594,210 @@ public class GameController implements Initializable {
                 btnA.setText(Question_4_4.Answer_2);
                 btnB.setText(Question_4_4.Answer_3);
                 btnC.setText(Question_4_4.Answer_4);
+            }
+        }
+    }
+
+    public void loadQuestion_5() {
+        int x;
+        Random random = new Random();
+        x = random.nextInt(4);
+        int y;
+        Random rand = new Random();
+        y = rand.nextInt(4);
+        if (x == 0) {
+            lblQuestion.setText(Question_5_1.Question);
+            if (y == 0) {
+                btnA.setText(Question_5_1.Answer_1);
+                btnB.setText(Question_5_1.Answer_2);
+                btnC.setText(Question_5_1.Answer_3);
+                btnD.setText(Question_5_1.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_5_1.Answer_1);
+                btnC.setText(Question_5_1.Answer_2);
+                btnD.setText(Question_5_1.Answer_3);
+                btnA.setText(Question_5_1.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_5_1.Answer_1);
+                btnD.setText(Question_5_1.Answer_2);
+                btnA.setText(Question_5_1.Answer_3);
+                btnB.setText(Question_5_1.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_5_1.Answer_1);
+                btnA.setText(Question_5_1.Answer_2);
+                btnB.setText(Question_5_1.Answer_3);
+                btnC.setText(Question_5_1.Answer_4);
+            }
+        } else if (x == 1) {
+            lblQuestion.setText(Question_5_2.Question);
+            if (y == 0) {
+                btnA.setText(Question_5_2.Answer_1);
+                btnB.setText(Question_5_2.Answer_2);
+                btnC.setText(Question_5_2.Answer_3);
+                btnD.setText(Question_5_2.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_5_2.Answer_1);
+                btnC.setText(Question_5_2.Answer_2);
+                btnD.setText(Question_5_2.Answer_3);
+                btnA.setText(Question_5_2.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_5_2.Answer_1);
+                btnD.setText(Question_5_2.Answer_2);
+                btnA.setText(Question_5_2.Answer_3);
+                btnB.setText(Question_5_2.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_5_2.Answer_1);
+                btnA.setText(Question_5_2.Answer_2);
+                btnB.setText(Question_5_2.Answer_3);
+                btnC.setText(Question_5_2.Answer_4);
+            }
+        } else if (x == 2) {
+            lblQuestion.setText(Question_5_3.Question);
+            if (y == 0) {
+                btnA.setText(Question_5_3.Answer_1);
+                btnB.setText(Question_5_3.Answer_2);
+                btnC.setText(Question_5_3.Answer_3);
+                btnD.setText(Question_5_3.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_5_3.Answer_1);
+                btnC.setText(Question_5_3.Answer_2);
+                btnD.setText(Question_5_3.Answer_3);
+                btnA.setText(Question_5_3.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_5_3.Answer_1);
+                btnD.setText(Question_5_3.Answer_2);
+                btnA.setText(Question_5_3.Answer_3);
+                btnB.setText(Question_5_3.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_5_3.Answer_1);
+                btnA.setText(Question_5_3.Answer_2);
+                btnB.setText(Question_5_3.Answer_3);
+                btnC.setText(Question_5_3.Answer_4);
+            }
+        } else if (x == 3) {
+            lblQuestion.setText(Question_5_4.Question);
+            if (y == 0) {
+                btnA.setText(Question_5_4.Answer_1);
+                btnB.setText(Question_5_4.Answer_2);
+                btnC.setText(Question_5_4.Answer_3);
+                btnD.setText(Question_5_4.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_5_4.Answer_1);
+                btnC.setText(Question_5_4.Answer_2);
+                btnD.setText(Question_5_4.Answer_3);
+                btnA.setText(Question_5_4.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_5_4.Answer_1);
+                btnD.setText(Question_5_4.Answer_2);
+                btnA.setText(Question_5_4.Answer_3);
+                btnB.setText(Question_5_4.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_5_4.Answer_1);
+                btnA.setText(Question_5_4.Answer_2);
+                btnB.setText(Question_5_4.Answer_3);
+                btnC.setText(Question_5_4.Answer_4);
+            }
+        }
+    }
+
+    public void loadQuestion_6() {
+        int x;
+        Random random = new Random();
+        x = random.nextInt(4);
+        int y;
+        Random rand = new Random();
+        y = rand.nextInt(4);
+        if (x == 0) {
+            lblQuestion.setText(Question_6_1.Question);
+            if (y == 0) {
+                btnA.setText(Question_6_1.Answer_1);
+                btnB.setText(Question_6_1.Answer_2);
+                btnC.setText(Question_6_1.Answer_3);
+                btnD.setText(Question_6_1.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_6_1.Answer_1);
+                btnC.setText(Question_6_1.Answer_2);
+                btnD.setText(Question_6_1.Answer_3);
+                btnA.setText(Question_6_1.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_6_1.Answer_1);
+                btnD.setText(Question_6_1.Answer_2);
+                btnA.setText(Question_6_1.Answer_3);
+                btnB.setText(Question_6_1.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_6_1.Answer_1);
+                btnA.setText(Question_6_1.Answer_2);
+                btnB.setText(Question_6_1.Answer_3);
+                btnC.setText(Question_6_1.Answer_4);
+            }
+        } else if (x == 1) {
+            lblQuestion.setText(Question_6_2.Question);
+            if (y == 0) {
+                btnA.setText(Question_6_2.Answer_1);
+                btnB.setText(Question_6_2.Answer_2);
+                btnC.setText(Question_6_2.Answer_3);
+                btnD.setText(Question_6_2.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_6_2.Answer_1);
+                btnC.setText(Question_6_2.Answer_2);
+                btnD.setText(Question_6_2.Answer_3);
+                btnA.setText(Question_6_2.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_6_2.Answer_1);
+                btnD.setText(Question_6_2.Answer_2);
+                btnA.setText(Question_6_2.Answer_3);
+                btnB.setText(Question_6_2.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_6_2.Answer_1);
+                btnA.setText(Question_6_2.Answer_2);
+                btnB.setText(Question_6_2.Answer_3);
+                btnC.setText(Question_6_2.Answer_4);
+            }
+        } else if (x == 2) {
+            lblQuestion.setText(Question_6_3.Question);
+            if (y == 0) {
+                btnA.setText(Question_6_3.Answer_1);
+                btnB.setText(Question_6_3.Answer_2);
+                btnC.setText(Question_6_3.Answer_3);
+                btnD.setText(Question_6_3.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_6_3.Answer_1);
+                btnC.setText(Question_6_3.Answer_2);
+                btnD.setText(Question_6_3.Answer_3);
+                btnA.setText(Question_6_3.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_6_3.Answer_1);
+                btnD.setText(Question_6_3.Answer_2);
+                btnA.setText(Question_6_3.Answer_3);
+                btnB.setText(Question_6_3.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_6_3.Answer_1);
+                btnA.setText(Question_6_3.Answer_2);
+                btnB.setText(Question_6_3.Answer_3);
+                btnC.setText(Question_6_3.Answer_4);
+            }
+        } else if (x == 3) {
+            lblQuestion.setText(Question_6_4.Question);
+            if (y == 0) {
+                btnA.setText(Question_6_4.Answer_1);
+                btnB.setText(Question_6_4.Answer_2);
+                btnC.setText(Question_6_4.Answer_3);
+                btnD.setText(Question_6_4.Answer_4);
+            } else if (y == 1) {
+                btnB.setText(Question_6_4.Answer_1);
+                btnC.setText(Question_6_4.Answer_2);
+                btnD.setText(Question_6_4.Answer_3);
+                btnA.setText(Question_6_4.Answer_4);
+            } else if (y == 2) {
+                btnC.setText(Question_6_4.Answer_1);
+                btnD.setText(Question_6_4.Answer_2);
+                btnA.setText(Question_6_4.Answer_3);
+                btnB.setText(Question_6_4.Answer_4);
+            } else if (y == 3) {
+                btnD.setText(Question_6_4.Answer_1);
+                btnA.setText(Question_6_4.Answer_2);
+                btnB.setText(Question_6_4.Answer_3);
+                btnC.setText(Question_6_4.Answer_4);
             }
         }
     }
@@ -1020,6 +1255,16 @@ public class GameController implements Initializable {
             lblAnswerStatus.setText("Select one answer");
             loadQuestion_4();
         } else if (lblQuestion.getText().equals(Question_4_1.Question) || lblQuestion.getText().equals(Question_4_2.Question) || lblQuestion.getText().equals(Question_4_3.Question) || lblQuestion.getText().equals(Question_4_4.Question)) {
+            btnBack.setVisible(false);
+            btnNext.setVisible(false);
+            lblAnswerStatus.setText("Select one answer");
+            loadQuestion_5();
+        } else if (lblQuestion.getText().equals(Question_5_1.Question) || lblQuestion.getText().equals(Question_5_2.Question) || lblQuestion.getText().equals(Question_5_3.Question) || lblQuestion.getText().equals(Question_5_4.Question)) {
+            btnBack.setVisible(false);
+            btnNext.setVisible(false);
+            lblAnswerStatus.setText("Select one answer");
+            loadQuestion_6();
+        } else if (lblQuestion.getText().equals(Question_6_1.Question) || lblQuestion.getText().equals(Question_6_2.Question) || lblQuestion.getText().equals(Question_6_3.Question) || lblQuestion.getText().equals(Question_6_4.Question)) {
             openMenu();
         }
     }

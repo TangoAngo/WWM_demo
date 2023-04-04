@@ -57,6 +57,7 @@ public class MainController implements Initializable {
         lastScore = Score;
         lblLastScoreNumber.setText(String.valueOf(lastScore));
         jokerEnabled = SettingsController.Joker;
+        serializeUserSettings();
     }
 
     public void onStartButtonClick() {
