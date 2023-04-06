@@ -6,7 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -74,13 +75,13 @@ public class MainController implements Initializable {
         }
     }
 
-    public void onButtonStartEntered() {
+    /*public void onButtonStartEntered() {
         btnStart.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonStartExited() {
+    /*public void onButtonStartExited() {
         btnStart.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonSettingsClick() {
         try {
@@ -96,13 +97,13 @@ public class MainController implements Initializable {
         }
     }
 
-    public void onButtonSettingsEntered() {
+    /*public void onButtonSettingsEntered() {
         btnSettings.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonSettingsExited() {
+    /*public void onButtonSettingsExited() {
         btnSettings.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public static void serializeUserSettings() {
         if (FelixSettings.TopScore < topScore) {
@@ -142,11 +143,11 @@ public class MainController implements Initializable {
         Platform.exit();
     }
 
-    public void onButtonCloseEntered() {
+    /*public void onButtonCloseEntered() {
         btnClose.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonCloseExited() {
+    /*public void onButtonCloseExited() {
         btnClose.setStyle("-fx-background-color: Null");
-    }
+    }*/
 }

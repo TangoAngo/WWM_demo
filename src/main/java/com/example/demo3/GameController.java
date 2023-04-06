@@ -821,13 +821,13 @@ public class GameController implements Initializable {
         }
     }
 
-    public void onButtonAEntered() {
+    /*public void onButtonAEntered() {
         btnA.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonAExited() {
+    /*public void onButtonAExited() {
         btnA.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonBClick() {
         if (Correct_B()) {
@@ -848,13 +848,13 @@ public class GameController implements Initializable {
         }
     }
 
-    public void onButtonBEntered() {
+    /*public void onButtonBEntered() {
         btnB.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonBExited() {
+    /*public void onButtonBExited() {
         btnB.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonCClick() {
         if (Correct_C()) {
@@ -875,13 +875,13 @@ public class GameController implements Initializable {
         }
     }
 
-    public void onButtonCEntered() {
+    /*public void onButtonCEntered() {
         btnC.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonCExited() {
+    /*public void onButtonCExited() {
         btnC.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonDClick() {
         if (Correct_D()) {
@@ -902,13 +902,13 @@ public class GameController implements Initializable {
         }
     }
 
-    public void onButtonDEntered() {
+    /*public void onButtonDEntered() {
         btnD.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonDExited() {
+    /*public void onButtonDExited() {
         btnD.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonJokerFiftyClick() {
         if (Correct_A()) {
@@ -971,13 +971,13 @@ public class GameController implements Initializable {
         btnJokerFifty.setVisible(false);
     }
 
-    public void onButtonJokerFiftyEntered() {
+    /*public void onButtonJokerFiftyEntered() {
         btnJokerFifty.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonJokerFiftyExited() {
+    /*public void onButtonJokerFiftyExited() {
         btnJokerFifty.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonJokerTelephoneClick() {
         if (Correct_A()) {
@@ -1036,13 +1036,13 @@ public class GameController implements Initializable {
         btnJokerTelephone.setVisible(false);
     }
 
-    public void onButtonJokerTelephoneEntered() {
+    /*public void onButtonJokerTelephoneEntered() {
         btnJokerTelephone.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonJokerTelephoneExited() {
+    /*public void onButtonJokerTelephoneExited() {
         btnJokerTelephone.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonJokerAudienceClick() {
         apnAudience.setVisible(true);
@@ -1223,13 +1223,13 @@ public class GameController implements Initializable {
         btnJokerAudience.setVisible(false);
     }
 
-    public void onButtonJokerAudienceEntered() {
+    /*public void onButtonJokerAudienceEntered() {
         btnJokerAudience.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonJokerAudienceExited() {
+    /*public void onButtonJokerAudienceExited() {
         btnJokerAudience.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonNextClick() {
         btnA.setVisible(true);
@@ -1269,25 +1269,25 @@ public class GameController implements Initializable {
         }
     }
 
-    public void onButtonNextEntered() {
+    /*public void onButtonNextEntered() {
         btnNext.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonNextExited() {
+    /*public void onButtonNextExited() {
         btnNext.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void onButtonBackClick() {
         openMenu();
     }
 
-    public void onButtonBackEntered() {
+    /*public void onButtonBackEntered() {
         btnBack.setStyle("-fx-background-color: Orange");
-    }
+    }*/
 
-    public void onButtonBackExited() {
+    /*public void onButtonBackExited() {
         btnBack.setStyle("-fx-background-color: Null");
-    }
+    }*/
 
     public void openMenu() {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Menu.fxml"));

@@ -1,8 +1,8 @@
 .root {
-    -fx-background-image:url('1080.png');
+    -fx-background-image:url("Background-image.png");
     -fx-background-size:cover;
 }
 .button {
-    -fx-background-color: Null;
+    -fx-background-color: white;
     -fx-background-radius: 15;
 }
