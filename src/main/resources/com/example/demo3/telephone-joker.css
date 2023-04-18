@@ -1,0 +1,5 @@
+.root {
+    -fx-background-image: url("telephone-joker.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}

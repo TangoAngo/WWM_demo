@@ -1,0 +1,5 @@
+.root {
+    -fx-background-image:url("audience-joker.png");
+    -fx-background-size:cover;
+    -fx-background-color: null;
+}
