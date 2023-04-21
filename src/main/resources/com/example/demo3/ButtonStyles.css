@@ -1,0 +1,50 @@
+#btnAnswers {
+    -fx-background-image: url("answers.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnAnswers:hover {
+    -fx-background-image: url("answers-hover.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnAnswersCorrect {
+    -fx-background-image: url("answers-correct.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnAnswersWrong {
+    -fx-background-image: url("answers-wrong.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnJokerFifty {
+    -fx-background-image: url("50-joker.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnJokerFifty:hover {
+    -fx-background-image: url("50-joker-hover.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnJokerAudience {
+    -fx-background-image:url("audience-joker.png");
+    -fx-background-size:cover;
+    -fx-background-color: null;
+}
+#btnJokerAudience:hover {
+    -fx-background-image:url("audience-joker-hover.png");
+    -fx-background-size:cover;
+    -fx-background-color: null;
+}
+#btnJokerTelephone {
+    -fx-background-image: url("telephone-joker.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnJokerTelephone:hover {
+    -fx-background-image: url("telephone-joker-hover.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}

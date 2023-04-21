@@ -74,6 +74,7 @@ public class GameController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ButtonStyles();
         Score = 0;
         loadQuestion_1();
         if (!SettingsController.Joker) {
@@ -81,6 +82,23 @@ public class GameController implements Initializable {
             btnJokerTelephone.setVisible(false);
             btnJokerAudience.setVisible(false);
         }
+    }
+
+    public void ButtonStyles() {
+        btnA.setId("btnAnswers");
+        btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnB.setId("btnAnswers");
+        btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnC.setId("btnAnswers");
+        btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnD.setId("btnAnswers");
+        btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnJokerFifty.setId("btnJokerFifty");
+        btnJokerFifty.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnJokerAudience.setId("btnJokerAudience");
+        btnJokerAudience.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnJokerTelephone.setId("btnJokerTelephone");
+        btnJokerTelephone.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
     }
 
     //Question Question_6_1 = new Question("", "", "", "", "");
@@ -108,7 +126,7 @@ public class GameController implements Initializable {
     Question Question_4_3 = new Question("Wann wird der Tag der Deutschen Einheit gefeiert?", "3. Oktober", "2. November", "4. Juli", "6. September");
     Question Question_4_4 = new Question("Welche ist die Hauptstadt Australiens?", "Canberra", "Sydney", "Melbourne", "Perth");
 
-    Question Question_5_1 = new Question("Wie heißt das flächenmäßig kleinste Bundesland?", "Bremen", "Berlin", "Saarland", "Hamburg");
+    Question Question_5_1 = new Question("Wie heißt das flächenmäßig kleinste Bundesland?", "Bremen", "Bayern", "Saarland", "Hamburg");
     Question Question_5_2 = new Question("Welcher deutsche Herrscher trug den Beinamen 'der Große?'", "Friedrich II. von Preußen", "Friedrich I. von Preußen", "Friedrich III. von Sachsen", "Friedrich III. von Österreich");
     Question Question_5_3 = new Question("Wie nennt man einen Feinschmecker auch?", "Gourmet", "Gourmed", "Genießer", "Leckermäulchen");
     Question Question_5_4 = new Question("Welche Insel gehört nicht zu den balarischen Inseln?", "Gran Canaria", "Ibiza", "Formentera", "Cabrera");
@@ -804,111 +822,111 @@ public class GameController implements Initializable {
 
     public void onButtonAClick() {
         if (Correct_A()) {
+            btnA.setId("btnAnswersCorrect");
+            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
             Score ++;
             lblScore.setText("Score: " + Score);
             btnNext.setVisible(true);
-            btnB.setVisible(false);
-            btnC.setVisible(false);
-            btnD.setVisible(false);
         }
         else {
+            btnA.setId("btnAnswersWrong");
+            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-            btnB.setVisible(false);
-            btnC.setVisible(false);
-            btnD.setVisible(false);
+        }
+        if (Correct_B()) {
+            btnB.setId("btnAnswersCorrect");
+            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_C()) {
+            btnC.setId("btnAnswersCorrect");
+            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_D()) {
+            btnD.setId("btnAnswersCorrect");
+            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
     }
-
-    /*public void onButtonAEntered() {
-        btnA.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonAExited() {
-        btnA.setStyle("-fx-background-color: Null");
-    }*/
 
     public void onButtonBClick() {
         if (Correct_B()) {
+            btnB.setId("btnAnswersCorrect");
+            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
             Score ++;
             lblScore.setText("Score: " + Score);
             btnNext.setVisible(true);
-            btnA.setVisible(false);
-            btnC.setVisible(false);
-            btnD.setVisible(false);
         }
         else {
+            btnB.setId("btnAnswersWrong");
+            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-            btnA.setVisible(false);
-            btnC.setVisible(false);
-            btnD.setVisible(false);
+        }
+        if (Correct_A()) {
+            btnA.setId("btnAnswersCorrect");
+            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_C()) {
+            btnC.setId("btnAnswersCorrect");
+            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_D()) {
+            btnD.setId("btnAnswersCorrect");
+            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
     }
-
-    /*public void onButtonBEntered() {
-        btnB.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonBExited() {
-        btnB.setStyle("-fx-background-color: Null");
-    }*/
 
     public void onButtonCClick() {
         if (Correct_C()) {
+            btnC.setId("btnAnswersCorrect");
+            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
             Score ++;
             lblScore.setText("Score: " + Score);
             btnNext.setVisible(true);
-            btnA.setVisible(false);
-            btnB.setVisible(false);
-            btnD.setVisible(false);
         }
         else {
+            btnC.setId("btnAnswersWrong");
+            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-            btnA.setVisible(false);
-            btnB.setVisible(false);
-            btnD.setVisible(false);
+        }
+        if (Correct_A()) {
+            btnA.setId("btnAnswersCorrect");
+            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_B()) {
+            btnB.setId("btnAnswersCorrect");
+            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_D()) {
+            btnD.setId("btnAnswersCorrect");
+            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
     }
-
-    /*public void onButtonCEntered() {
-        btnC.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonCExited() {
-        btnC.setStyle("-fx-background-color: Null");
-    }*/
 
     public void onButtonDClick() {
         if (Correct_D()) {
+            btnD.setId("btnAnswersCorrect");
+            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
             Score ++;
             lblScore.setText("Score: " + Score);
             btnNext.setVisible(true);
-            btnA.setVisible(false);
-            btnB.setVisible(false);
-            btnC.setVisible(false);
         }
         else {
+            btnD.setId("btnAnswersWrong");
+            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-            btnA.setVisible(false);
-            btnB.setVisible(false);
-            btnC.setVisible(false);
+        }
+        if (Correct_A()) {
+            btnA.setId("btnAnswersCorrect");
+            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_B()) {
+            btnB.setId("btnAnswersCorrect");
+            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        } else if (Correct_C()) {
+            btnC.setId("btnAnswersCorrect");
+            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
     }
-
-    /*public void onButtonDEntered() {
-        btnD.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonDExited() {
-        btnD.setStyle("-fx-background-color: Null");
-    }*/
 
     public void onButtonJokerFiftyClick() {
         if (Correct_A()) {
@@ -971,14 +989,6 @@ public class GameController implements Initializable {
         btnJokerFifty.setVisible(false);
     }
 
-    /*public void onButtonJokerFiftyEntered() {
-        btnJokerFifty.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonJokerFiftyExited() {
-        btnJokerFifty.setStyle("-fx-background-color: Null");
-    }*/
-
     public void onButtonJokerTelephoneClick() {
         if (Correct_A()) {
             int a;
@@ -1035,14 +1045,6 @@ public class GameController implements Initializable {
         }
         btnJokerTelephone.setVisible(false);
     }
-
-    /*public void onButtonJokerTelephoneEntered() {
-        btnJokerTelephone.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonJokerTelephoneExited() {
-        btnJokerTelephone.setStyle("-fx-background-color: Null");
-    }*/
 
     public void onButtonJokerAudienceClick() {
         apnAudience.setVisible(true);
@@ -1223,19 +1225,19 @@ public class GameController implements Initializable {
         btnJokerAudience.setVisible(false);
     }
 
-    /*public void onButtonJokerAudienceEntered() {
-        btnJokerAudience.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonJokerAudienceExited() {
-        btnJokerAudience.setStyle("-fx-background-color: Null");
-    }*/
-
     public void onButtonNextClick() {
         btnA.setVisible(true);
         btnB.setVisible(true);
         btnC.setVisible(true);
         btnD.setVisible(true);
+        btnA.setId("btnAnswers");
+        btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnB.setId("btnAnswers");
+        btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnC.setId("btnAnswers");
+        btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnD.setId("btnAnswers");
+        btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         if (!lblJokerTelephone.getText().equals("")) {
             lblJokerTelephone.setVisible(false);
         }
@@ -1269,25 +1271,9 @@ public class GameController implements Initializable {
         }
     }
 
-    /*public void onButtonNextEntered() {
-        btnNext.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonNextExited() {
-        btnNext.setStyle("-fx-background-color: Null");
-    }*/
-
     public void onButtonBackClick() {
         openMenu();
     }
-
-    /*public void onButtonBackEntered() {
-        btnBack.setStyle("-fx-background-color: Orange");
-    }*/
-
-    /*public void onButtonBackExited() {
-        btnBack.setStyle("-fx-background-color: Null");
-    }*/
 
     public void openMenu() {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Menu.fxml"));

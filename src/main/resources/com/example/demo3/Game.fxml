@@ -10,18 +10,18 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.GameController">
    <children>
       <Label fx:id="lblQuestion" alignment="CENTER" layoutX="236.0" layoutY="89.0" text="Question" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Button fx:id="btnA" layoutX="100.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonAClick" text="A" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="270.0" />
-      <Button fx:id="btnB" layoutX="354.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonBClick" text="B" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="50.0" />
-      <Button fx:id="btnC" layoutX="90.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonCClick" text="C" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="270.0" />
-      <Button fx:id="btnD" layoutX="358.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonDClick" text="D" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="50.0" />
+      <Button fx:id="btnA" layoutX="50.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonAClick" prefHeight="25.0" prefWidth="180.0" text="A" textFill="WHITE" />
+      <Button fx:id="btnB" layoutX="270.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonBClick" prefHeight="25.0" prefWidth="180.0" text="B" textFill="WHITE" />
+      <Button fx:id="btnC" layoutX="50.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonCClick" prefHeight="25.0" prefWidth="180.0" text="C" textFill="WHITE" />
+      <Button fx:id="btnD" layoutX="270.0" layoutY="195.0" mnemonicParsing="false" onAction="#onButtonDClick" prefHeight="25.0" prefWidth="180.0" text="D" textFill="WHITE" />
       <Label fx:id="lblAnswerStatus" alignment="CENTER" layoutY="269.0" text="Select one answer" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Button fx:id="btnNext" layoutX="441.0" layoutY="265.0" mnemonicParsing="false" onAction="#onButtonNextClick" text="Next" visible="false" />
       <Button fx:id="btnBack" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#onButtonBackClick" text="Back" visible="false" />
       <Label fx:id="lblScore" layoutX="14.0" layoutY="14.0" text="Score: 0" textFill="WHITE" AnchorPane.leftAnchor="14.0" />
-      <Button fx:id="btnJokerFifty" layoutX="218.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerFiftyClick" prefHeight="40.0" prefWidth="65.0" styleClass="root" stylesheets="@50-joker.css" />
-      <Button fx:id="btnJokerTelephone" layoutX="283.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerTelephoneClick" prefHeight="40.0" prefWidth="65.0" styleClass="root" stylesheets="@telephone-joker.css" />
+      <Button fx:id="btnJokerFifty" layoutX="218.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerFiftyClick" prefHeight="40.0" prefWidth="65.0" />
+      <Button fx:id="btnJokerTelephone" layoutX="283.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerTelephoneClick" prefHeight="40.0" prefWidth="65.0" />
       <Label fx:id="lblJokerTelephone" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="64.0" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-      <Button fx:id="btnJokerAudience" layoutX="153.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerAudienceClick" prefHeight="40.0" prefWidth="65.0" styleClass="root" stylesheets="@audience-joker.css" />
+      <Button fx:id="btnJokerAudience" layoutX="153.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonJokerAudienceClick" prefHeight="40.0" prefWidth="65.0" />
       <AnchorPane fx:id="apnAudience" layoutX="150.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.leftAnchor="150.0">
          <children>
             <SubScene height="200.0" width="200.0">
