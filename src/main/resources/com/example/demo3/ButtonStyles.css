@@ -1,3 +1,23 @@
+#btnMenu {
+    -fx-background-image: url("menu.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnMenu:hover {
+    -fx-background-image: url("menu-hover.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnClose {
+    -fx-background-image: url("close.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+#btnClose:hover {
+    -fx-background-image: url("close-hover.png");
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
 #btnAnswers {
     -fx-background-image: url("answers.png");
     -fx-background-size: cover;

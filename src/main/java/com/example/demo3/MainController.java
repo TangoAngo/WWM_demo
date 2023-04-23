@@ -47,6 +47,7 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ButtonStyles();
         deserializeUserSettings();
         Score = GameController.Score;
         if (Score > topScore) {
@@ -59,6 +60,15 @@ public class MainController implements Initializable {
         lblLastScoreNumber.setText(String.valueOf(lastScore));
         jokerEnabled = SettingsController.Joker;
         serializeUserSettings();
+    }
+
+    public void ButtonStyles() {
+        btnStart.setId("btnMenu");
+        btnStart.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnSettings.setId("btnMenu");
+        btnSettings.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+        btnClose.setId("btnClose");
+        btnClose.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
     }
 
     public void onStartButtonClick() {

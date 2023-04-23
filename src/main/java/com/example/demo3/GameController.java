@@ -9,9 +9,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
@@ -72,8 +75,22 @@ public class GameController implements Initializable {
     @FXML
     ProgressBar pbrAudienceD;
 
+    //Sounds
+    String musicFileBackground = "src/background.mp3";
+    Media background = new Media(new File(musicFileBackground).toURI().toString());
+    MediaPlayer mediaBackground = new MediaPlayer(background);
+
+    String musicFileApplause = "src/applause.mp3";
+    Media applause = new Media(new File(musicFileApplause).toURI().toString());
+    MediaPlayer mediaApplause = new MediaPlayer(applause);
+
+    String musicFileDisappointed = "src/crowd-reactions.mp3";
+    Media disappointed = new Media(new File(musicFileDisappointed).toURI().toString());
+    MediaPlayer mediaDisappointed = new MediaPlayer(disappointed);
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mediaBackground.setAutoPlay(true);
         ButtonStyles();
         Score = 0;
         loadQuestion_1();
@@ -99,6 +116,12 @@ public class GameController implements Initializable {
         btnJokerAudience.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         btnJokerTelephone.setId("btnJokerTelephone");
         btnJokerTelephone.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
+    }
+
+    public void mediaDisappointed() {
+        mediaDisappointed.seek(Duration.ZERO);
+        mediaDisappointed.setStopTime(Duration.millis(2000));
+        mediaDisappointed.play();
     }
 
     //Question Question_6_1 = new Question("", "", "", "", "");
@@ -822,6 +845,10 @@ public class GameController implements Initializable {
 
     public void onButtonAClick() {
         if (Correct_A()) {
+            if (lblQuestion.getText().equals(Question_6_1.Question) | lblQuestion.getText().equals(Question_6_2.Question) | lblQuestion.getText().equals(Question_6_3.Question) | lblQuestion.getText().equals(Question_6_4.Question)) {
+                mediaApplause.seek(Duration.ZERO);
+                mediaApplause.play();
+            }
             btnA.setId("btnAnswersCorrect");
             btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
@@ -830,20 +857,11 @@ public class GameController implements Initializable {
             btnNext.setVisible(true);
         }
         else {
+            mediaDisappointed();
             btnA.setId("btnAnswersWrong");
             btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-        }
-        if (Correct_B()) {
-            btnB.setId("btnAnswersCorrect");
-            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_C()) {
-            btnC.setId("btnAnswersCorrect");
-            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_D()) {
-            btnD.setId("btnAnswersCorrect");
-            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
         btnB.setDisable(true);
         btnC.setDisable(true);
@@ -852,6 +870,10 @@ public class GameController implements Initializable {
 
     public void onButtonBClick() {
         if (Correct_B()) {
+            if (lblQuestion.getText().equals(Question_6_1.Question) | lblQuestion.getText().equals(Question_6_2.Question) | lblQuestion.getText().equals(Question_6_3.Question) | lblQuestion.getText().equals(Question_6_4.Question)) {
+                mediaApplause.seek(Duration.ZERO);
+                mediaApplause.play();
+            }
             btnB.setId("btnAnswersCorrect");
             btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
@@ -860,20 +882,11 @@ public class GameController implements Initializable {
             btnNext.setVisible(true);
         }
         else {
+            mediaDisappointed();
             btnB.setId("btnAnswersWrong");
             btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-        }
-        if (Correct_A()) {
-            btnA.setId("btnAnswersCorrect");
-            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_C()) {
-            btnC.setId("btnAnswersCorrect");
-            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_D()) {
-            btnD.setId("btnAnswersCorrect");
-            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
         btnA.setDisable(true);
         btnC.setDisable(true);
@@ -882,6 +895,10 @@ public class GameController implements Initializable {
 
     public void onButtonCClick() {
         if (Correct_C()) {
+            if (lblQuestion.getText().equals(Question_6_1.Question) | lblQuestion.getText().equals(Question_6_2.Question) | lblQuestion.getText().equals(Question_6_3.Question) | lblQuestion.getText().equals(Question_6_4.Question)) {
+                mediaApplause.seek(Duration.ZERO);
+                mediaApplause.play();
+            }
             btnC.setId("btnAnswersCorrect");
             btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
@@ -890,20 +907,11 @@ public class GameController implements Initializable {
             btnNext.setVisible(true);
         }
         else {
+            mediaDisappointed();
             btnC.setId("btnAnswersWrong");
             btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-        }
-        if (Correct_A()) {
-            btnA.setId("btnAnswersCorrect");
-            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_B()) {
-            btnB.setId("btnAnswersCorrect");
-            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_D()) {
-            btnD.setId("btnAnswersCorrect");
-            btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
         btnA.setDisable(true);
         btnB.setDisable(true);
@@ -912,28 +920,24 @@ public class GameController implements Initializable {
 
     public void onButtonDClick() {
         if (Correct_D()) {
+            if (lblQuestion.getText().equals(Question_6_1.Question) | lblQuestion.getText().equals(Question_6_2.Question) | lblQuestion.getText().equals(Question_6_3.Question) | lblQuestion.getText().equals(Question_6_4.Question)) {
+                mediaApplause.seek(Duration.ZERO);
+                mediaApplause.play();
+            }
             btnD.setId("btnAnswersCorrect");
             btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Correct");
             Score ++;
             lblScore.setText("Score: " + Score);
             btnNext.setVisible(true);
+
         }
         else {
+            mediaDisappointed();
             btnD.setId("btnAnswersWrong");
             btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
             lblAnswerStatus.setText("Wrong");
             btnBack.setVisible(true);
-        }
-        if (Correct_A()) {
-            btnA.setId("btnAnswersCorrect");
-            btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_B()) {
-            btnB.setId("btnAnswersCorrect");
-            btnB.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
-        } else if (Correct_C()) {
-            btnC.setId("btnAnswersCorrect");
-            btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
         btnA.setDisable(true);
         btnB.setDisable(true);

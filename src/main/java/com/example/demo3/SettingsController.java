@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class SettingsController implements Initializable {
 
     //Booleans in Settings
-    static boolean Joker;
+    static boolean Joker = true;
 
     //Buttons in Settings.fxml
     @FXML
