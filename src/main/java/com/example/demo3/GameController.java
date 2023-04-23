@@ -845,6 +845,9 @@ public class GameController implements Initializable {
             btnD.setId("btnAnswersCorrect");
             btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
+        btnB.setDisable(true);
+        btnC.setDisable(true);
+        btnD.setDisable(true);
     }
 
     public void onButtonBClick() {
@@ -872,6 +875,9 @@ public class GameController implements Initializable {
             btnD.setId("btnAnswersCorrect");
             btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
+        btnA.setDisable(true);
+        btnC.setDisable(true);
+        btnD.setDisable(true);
     }
 
     public void onButtonCClick() {
@@ -899,6 +905,9 @@ public class GameController implements Initializable {
             btnD.setId("btnAnswersCorrect");
             btnD.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
+        btnA.setDisable(true);
+        btnB.setDisable(true);
+        btnD.setDisable(true);
     }
 
     public void onButtonDClick() {
@@ -926,6 +935,9 @@ public class GameController implements Initializable {
             btnC.setId("btnAnswersCorrect");
             btnC.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         }
+        btnA.setDisable(true);
+        btnB.setDisable(true);
+        btnC.setDisable(true);
     }
 
     public void onButtonJokerFiftyClick() {
@@ -1230,6 +1242,10 @@ public class GameController implements Initializable {
         btnB.setVisible(true);
         btnC.setVisible(true);
         btnD.setVisible(true);
+        btnA.setDisable(false);
+        btnB.setDisable(false);
+        btnC.setDisable(false);
+        btnD.setDisable(false);
         btnA.setId("btnAnswers");
         btnA.getStylesheets().add(getClass().getResource("ButtonStyles.css").toExternalForm());
         btnB.setId("btnAnswers");
